@@ -1,44 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ejercicios CSS Positioning</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-<h1>Ejemplo A : Posicion Static</h1>
-<div class="ejercicio">
-  <div id="box_1">  </div>
-  <div id="box_2">  </div>
-  <div id="box_3">  </div>
-</div>
 
-<h1>Ejemplo B : Posicion relative => similar al static </h1>
-<div class="ejercicio">
-  <div id="box_1_b">  </div>
-  <div id="box_2_b">  </div>
-  <div id="box_3_b">  </div>
-</div>
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios CSS Positioning</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-<h1>Ejemplo C : En el relative se puede modificar la posicion </h1>
-<div class="ejercicio">
-  <div id="box_1_b">  </div>
-  <div id="box_2_c">  </div>
-  <div id="box_3_b">  </div>
-</div>
+<body>
+  <h1>Ejemplo A : Posicion Static</h1>
+  <div class="ejercicio">
+    <div id="box_1"> </div>
+    <div id="box_2"> </div>
+    <div id="box_3"> </div>
+  </div>
+  <div class="contenido">
+    <p>En el ejemplo A , puedes ver tres elementos apilados como una simple torre. Fascinante, ¿no es así? Esta es la construcción de bloques 101. ¡Felicitaciones! Puede usar el staticvalor para diseños simples de una sola columna donde cada elemento debe
+      estar encima del siguiente. Si quieres empezar a reorientar los elementos alrededor de usar propiedades de desplazamiento tales como top, right, bottom, y left, estás de suerte. Estas propiedades no están disponibles para un staticelemento. De hecho,
+      un staticelemento ni siquiera puede crear un nuevo sistema de coordenadas para elementos secundarios. Espere. ¿Qué? Me perdiste en el sistema de coordenadas . Roger eso, Roger. Vamos a explicar usando el relativevalor. Los elementos posicionados
+      relativamente se comportan como los elementos posicionados estáticamente; Juegan bien con los demás, se amontonan bien y no causan alboroto. Es difícil de creer, ¿verdad? Eche un vistazo a nuestro ejemplo anterior. Esta vez, hemos aplicado el relativevalor:</p>
+  </div>
 
-<h1>Ejemplo D : mover #box_2_c dentro de #box_1_b:</h1>
-<div class="ejercicio">
-  <div id="box_1_b">
-<div id="box_2_c">  </div>
-   </div>
-    <div id="box_3_b">  </div>
-</div>
+  <h1>Ejemplo B : Posicion relative => similar al static </h1>
+  <div class="ejercicio">
+    <div id="box_1_b"> </div>
+    <div id="box_2_b"> </div>
+    <div id="box_3_b"> </div>
+  </div>
+  <div class="contenido2">
+    <p>El ejemplo B demuestra que los elementos relativamente posicionados se comportan exactamente de la misma manera que los elementos posicionados estáticamente. Lo que no puede saber es que los elementos con un relativevalor de posición son como Clark
+      Kent: ocultan poderes mucho mayores que sus hermanos estáticos. Para empezar, podemos ajustar un elemento relativamente posicionado con desplazamiento propiedades: top, right, bottom, y left. Usando el marcado de nuestro ejemplo anterior, agreguemos
+      una posición de desplazamiento a #box_2:</p>
+  </div>
+
+  <h1>Ejemplo C : En el relative se puede modificar la posicion </h1>
+  <div class="ejercicio">
+    <div id="box_1_b"> </div>
+    <div id="box_2_c"> </div>
+    <div id="box_3_b"> </div>
+  </div>
+  <div class="contenido3">
+    <p>El ejemplo C muestra este relativeposicionamiento en acción. Nuestros tres bloques están apilados muy bien, pero esta vez el bloque azul ( #box_2) se expulsa 200 píxeles desde la izquierda. Aquí es donde comenzamos a doblar la ley de la gravedad a
+      nuestra voluntad. El bloque azul todavía está en el flujo del documento, los elementos se están apilando uno encima del otro, pero noten el bloque verde ( #box_3) en la parte inferior. Está sentado debajo del bloque azul, aunque el bloque azul no
+      está directamente encima de él. Cuando usa la propiedad de desplazamiento para desplazar un elemento relativamente posicionado, no afecta los elementos que siguen. El cuadro verde todavía se posiciona como si el cuadro azul estuviera en su posición
+      no compensada. Intenta eso con tu torre de bloques alfabeto.
+    </p>
+  </div>
 
 
+  <h1>Ejemplo D : mover la caja azul</h1>
+  <div class="ejercicio">
+    <div id="box_1_b">
+      <div id="box_2_c"> </div>
+    </div>
+    <div id="box_3_b"> </div>
+  </div>
 
-</div>
+  <div class="contenido4">
+    <p>El ejemplo D muestra nuestro nuevo marcado. Debido al nuevo sistema de coordenadas, el bloque azul mide su desplazamiento a 200 píxeles de la izquierda del bloque rojo ( #box_1) en lugar del documento. Esta práctica es más común con los elementos
+      establecidos position: absolute, como usted desea que haya construido torres cuando era más joven.</p>
+  </div>
+
+  <h1>Ejemplo E : Position Absolute</h1>
+  <div class="imagen1"></div>
+  <div class="contenido5">
+    <p>El ejemplo E muestra cuatro cuadros, cada uno en una esquina de la ventana del navegador. Desde que establecemos el positionvalor de cada caja absolute, básicamente hemos velcro un cuadro a cada esquina de nuestra ventana del navegador. Al cambiar
+      el tamaño del navegador, esos cuadros permanecerán en sus esquinas respectivas. Si reduce la ventana del navegador para que los recuadros se superpongan, notará que no hay interacción en absoluto; eso se debe a que están fuera del flujo normal del
+      documento. Al igual que los relativeelementos, los absoluteelementos crean un nuevo sistema de coordenadas para elementos secundarios.</p>
+    <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploe.html">Ejemplo E</a>
+  </div>
 
 
-  </body>
+  <h1>Ejemplo F :Position Absolute</h1>
+  <div class="imagen2"></div>
+  <div class="contenido6">
+    <p>El ejemplo F se extiende al ejemplo E , con un elemento naranja dentro de cada caja. Observe que las coordenadas de desplazamiento son con respecto a cada elemento padre.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploF.html">Ejemplo F</a>
+  </div>
+
+  <h1>Ejemplo G : Position Absolute</h1>
+  <div class="imagen3"></div>
+  <div class="contenido7">
+    <p>En el ejemplo G , hemos creado un desplazamiento de borde de 10 píxeles por el documento, y es completamente fluido a medida que el documento cambia el tamaño, todo con absoluteposicionamiento y desplazamientos. En otro ejemplo, podemos crear un diseño
+      de dos columnas que rellene toda la altura del documento.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemplog.html">Ejemplo G</a>
+  </div>
+
+
+  <h1>Ejemplo H : Position Absolute</h1>
+  <div class="imagen4"></div>
+  <div class="contenido8">
+    <p>El ejemplo H muestra un diseño de dos columnas de pantalla completa. Si bien esto probablemente no sea el mejor enfoque para un diseño de dos columnas, aún muestra la potencia absoluteque posee el valor. Con un poco de creatividad puedes encontrar
+      varias aplicaciones útiles position: absolute. Trucos similares usan solo un solo valor de desplazamiento.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploh.html">Ejemplo H</a>
+  </div>
+
+
+  <h1>Ejemplo H2 : Position Absolute</h1>
+  <div class="imagen5"></div>
+  <div class="contenido9">
+    <p>En el ejemplo H2 , céntrese en el bloque azul ( #box_2). Nótese cómo uso único offset, left: 100px;. Esto permite que el #box_2elemento mantenga su borde superior y aún desplace 100 píxeles a la izquierda.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploh2.html">Ejemplo H2</a>
+  </div>
+
+  <h1>Ejemplo H3 : Position Absolute</h1>
+  <div class="imagen6"></div>
+  <div class="contenido10">
+    <p>Si aplicamos un segundo desplazamiento a la parte superior, veríamos que nuestro bloque azul ( #box_2) se lleva a la parte superior del documento.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploh3.html">Ejemplo H3</a>
+  </div>
+
+  <h1>Ejemplo I : Elemento Fixed </h1>
+  <div class="imagen7"></div>
+  <div class="contenido11">
+    <p>Un elemento con position: fixedcomparte todas las reglas de un elemento absolutamente posicionado, excepto que la ventana gráfica (ventana del navegador / dispositivo) posiciona el fixedelemento, a diferencia de cualquier elemento principal. Además,
+      un fixedelemento no se desplaza con el documento. Se queda, bueno ... fijo. Veamos un ejemplo:
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploi.html">Ejemplo I</a>
+  </div>
+
+  <h1>Ejemplo J : Aplicando todo lo aprendido </h1>
+  <div class="imagen8"></div>
+  <div class="contenido12">
+    <p> El ejemplo J muestra un diseño de sitio web típico con encabezado, navegación, contenido y pie de página. Recorremos cada elemento, discutamos sus positionpropiedades y por qué elegimos esa propiedad.
+      <p>Ingresar al siguiente link para visualizar :</p><a href="ejemploj.html">Ejemplo J</a>
+  </div>
+
+
+</body>
+
 </html>
